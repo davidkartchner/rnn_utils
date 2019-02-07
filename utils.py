@@ -197,8 +197,10 @@ def rnn_epoch(loader, model, criterion, output_activation=None, optimizer=None, 
 		output = model(input_var, lengths)
 		if output_activation:
 			output = output_activation(output, dim=1)
-
+		
+		print(output)
 		loss = criterion(output, target_var)
+		print(loss)
 		assert not np.isnan(loss.data[0]), 'Model diverged with loss = NaN'
 
 		# compute gradient and do update step
