@@ -33,16 +33,16 @@ parser.add_argument('data_path', metavar='DATA_PATH', help="Path to the dataset"
 parser.add_argument('--lr', '--learning-rate', default=1e-3, type=float, metavar='LR', help='learning rate (default: 1e-3)')
 parser.add_argument('--momentum', default=0.9, type=float, metavar='M', help='momentum (default: 0.9)')
 parser.add_argument('--weight-decay', '--wd', default=1e-4, type=float, metavar='W', help='weight decay (default: 1e-4)')
-parser.add_argument('--epochs', default=100, type=int, metavar='N', help='number of total epochs to run (default: 50)')
-parser.add_argument('-b', '--batch-size', default=256, type=int, metavar='N', help='mini-batch size for train (default: 128)')
-parser.add_argument('-eb', '--eval-batch-size', type=int, default=256, help='mini-batch size for eval (default: 128)')
+parser.add_argument('--epochs', default=100, type=int, metavar='N', help='number of total epochs to run (default: 100)')
+parser.add_argument('-b', '--batch-size', default=64, type=int, metavar='N', help='mini-batch size for train (default: 64)')
+parser.add_argument('-eb', '--eval-batch-size', type=int, default=64, help='mini-batch size for eval (default: 64)')
 
 parser.add_argument('--no-cuda', dest='cuda', action='store_false', help='NOT use cuda')
 parser.add_argument('--no-plot', dest='plot', action='store_false', help='no plot')
-parser.add_argument('--threads', type=int, default=16, help='number of threads for data loader to use (default: 2)')
+parser.add_argument('--threads', type=int, default=16, help='number of threads for data loader to use (default: 16)')
 parser.add_argument('--seed', type=int, default=0, help='random seed to use. Default=0')
 
-parser.add_argument('--save', default='./', type=str, metavar='SAVE_PATH', help='path to save checkpoints (default: none)')
+parser.add_argument('--save', default='./data/results/', type=str, metavar='SAVE_PATH', help='path to save checkpoints (default: none)')
 parser.add_argument('--resume', default='', type=str, metavar='LOAD_PATH', help='path to latest checkpoint (default: none)')
 
 parser.set_defaults(cuda=True, plot=True)
