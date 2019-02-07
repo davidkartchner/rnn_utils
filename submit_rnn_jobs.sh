@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python 1_train_RNN.py --save data/results/structured_0_months data/structured_0_months
+python 1_train_RNN.py --save data/results/structured_0_months_ data/structured_0_months_
 # python 1_train_RNN.py --save data/results/structured_3_months data/structured_3_months
 # python 1_train_RNN.py --save data/results/structured_6_months data/structured_6_months
 # python 1_train_RNN.py --save data/results/structured_9_months data/structured_9_months
